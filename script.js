@@ -70,7 +70,7 @@ function moveEverything() {
     ballSpeedY = deltaY * 0.35;
     let ball = new Audio("ball.mp3");
     ball.play();
-  }else  if (ballX > canvas.width) {
+  }else  if (ballX > 800) {
     ballReset();
     score1.textContent = Number(score1.textContent) + 1;
   } 
