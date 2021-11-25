@@ -103,7 +103,6 @@ function circle(x, y, radius, color) {
   canvasContext.fill();
 }
 function ballReset() {
-  ballSpeedX = 10;
   ballSpeedY = 4;
   ballSpeedX = -ballSpeedX;
   ballX = canvas.width / 2;
