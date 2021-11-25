@@ -64,7 +64,7 @@ function moveEverything() {
     ballReset();
     score2.textContent = Number(score2.textContent) + 1;
   }
-  if (ballY > paddle2Y && ballY < paddle2Y + paddleHeight && ballX === 750) {
+  else if (ballY > paddle2Y && ballY < paddle2Y + paddleHeight && ballX === 750) {
     ballSpeedX = -ballSpeedX;
     let deltaY = ballY - (paddle2Y + paddleHeight / 2);
     ballSpeedY = deltaY * 0.35;
