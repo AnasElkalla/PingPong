@@ -28,9 +28,13 @@ window.onload = function () {
     drawEverything();
     moveEverything();
   }, 1000 / framePerSecond);
-  canvas.addEventListener("click", function (e) {
-    let mousePos = calculateMousePosition(e);
-    paddle1Y = mousePos.y - paddleHeight / 2;
+document.addEventListener("click", function (e) {
+    paddle1Y = paddle1Y;
+    if (e.target > e.target) {
+      paddle1Y--;
+    } else {
+      paddle1Y++;
+    }
   });
   canvas.addEventListener("mousemove", function (e) {
     let mousePos = calculateMousePosition(e);
