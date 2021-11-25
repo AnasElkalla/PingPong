@@ -36,3 +36,10 @@ canvas {
 .score2 {
   color: red;
 }
+input[type="range"] {
+  position: absolute;
+  top: 450px;
+  right: 830px;
+  transform: rotate(90deg);
+  width: 300px;
+}
