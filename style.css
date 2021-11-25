@@ -36,7 +36,7 @@ canvas {
 .score2 {
   color: red;
 }
-input[type="range"] {
+input {
   position: absolute;
   top: 450px;
   right: 830px;
