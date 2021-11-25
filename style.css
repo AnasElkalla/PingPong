@@ -37,9 +37,7 @@ canvas {
   color: red;
 }
 input {
-  position: absolute;
-  top: 450px;
-  right: 830px;
-  transform: rotate(90deg);
+  position: relative;
+  top: 50px;
   width: 300px;
 }
