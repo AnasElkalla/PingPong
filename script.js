@@ -70,8 +70,7 @@ function moveEverything() {
   if (ballX > canvas.width) {
     ballReset();
     score1.textContent = Number(score1.textContent) + 1;
-  }
-  if (ballX < 0) {
+  }else if (ballX < 0) {
     ballReset();
     score2.textContent = Number(score2.textContent) + 1;
   }
