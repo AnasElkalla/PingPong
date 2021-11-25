@@ -10,6 +10,8 @@ let paddle2Y = 250;
 const paddleHeight = 100;
 const score1 = document.querySelector(".score1");
 const score2 = document.querySelector(".score2");
+const slider = document.querySelector("input");
+
 function calculateMousePosition(e) {
   let rect = canvas.getBoundingClientRect();
   let root = document.documentElement;
@@ -28,14 +30,9 @@ window.onload = function () {
     drawEverything();
     moveEverything();
   }, 1000 / framePerSecond);
-document.addEventListener("click", function (e) {
-    paddle1Y = paddle1Y;
-    if (e.target > e.target) {
-      paddle1Y--;
-    } else {
-      paddle1Y++;
-    }
-  });
+slider.oninput = function () {
+    paddle1Y = this.value * 5;
+  };
   canvas.addEventListener("mousemove", function (e) {
     let mousePos = calculateMousePosition(e);
     paddle1Y = mousePos.y - paddleHeight / 2;
