@@ -53,6 +53,13 @@ setInterval(paddlePC, 30);
 function moveEverything() {
   ballX = ballX + ballSpeedX;
   ballY = ballY + ballSpeedY;
+    if (ballX > canvas.width) {
+    ballReset();
+    score1.textContent = Number(score1.textContent) + 1;
+  } if (ballX < 0) {
+    ballReset();
+    score2.textContent = Number(score2.textContent) + 1;
+  }
   if (ballY > paddle1Y && ballY < paddle1Y + paddleHeight && ballX === 50) {
     ballSpeedX = -ballSpeedX;
     let deltaY = ballY - (paddle1Y + paddleHeight / 2);
@@ -67,13 +74,7 @@ function moveEverything() {
     let ball = new Audio("ball.mp3");
     ball.play();
   }
-  if (ballX > canvas.width) {
-    ballReset();
-    score1.textContent = Number(score1.textContent) + 1;
-  }else if (ballX < 0) {
-    ballReset();
-    score2.textContent = Number(score2.textContent) + 1;
-  }
+
 
   if (ballY > canvas.height) {
     ballSpeedY = -ballSpeedY;
